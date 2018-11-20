@@ -1,0 +1,25 @@
+{{#if addNewRental}}
+  <h1>New Rental</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="authr">Author</label>
+        {{input value=author id="author"}}
+      </div>
+
+      <div class="form-group">
+        <label for="picture url">Picture URL</label>
+        {{input value=pictureUrl id="Picture Url"}}
+      </div>
+
+      <div class="form-group">
+        <label for="Books">Books</label>
+        {{input value=Books id="Books"}}
+      </div>
+
+      <button {{action 'saveRental1'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'rentalFormShow'}}>New Rental</button>
+{{/if}}

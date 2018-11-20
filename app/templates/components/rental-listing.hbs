@@ -1,0 +1,19 @@
+<article class="listing">
+  <a
+    onclick={{action "toggleImageSize"}}
+    class="image {{if isWide "wide"}}"
+    role="button"
+  >
+    <img src={{rental.image}} alt="">
+    <small>View Larger</small>
+  </a>
+  <div class="details">
+    <h3>{{link-to rental.title "rentals.show" rental class=rental.id}}</h3>
+    <div class="detail owner">
+      <span>Books:</span> {{rental.owner}}
+    </div>
+    <button {{action 'delete' rental}}> Delete Author</button>
+  </div>
+</article>
+
+{{new-rental saveRental2="saveRental3"}}
